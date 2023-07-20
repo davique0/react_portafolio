@@ -4,7 +4,7 @@ import { BsFillMoonStarsFill, BsFillBrightnessHighFill } from 'react-icons/bs'
 import { AiFillTwitterCircle, AiFillLinkedin, AiFillGithub } from "react-icons/ai"
 import Image from "next/image"
 import { useState } from "react"
-import deved from '../../public/dev-ed-wave.png'
+import deved from '../../public/dev-mario.png'
 import design from '../../public/design.png';
 import code from '../../public/code.png';
 import consulting from '../../public/consulting.png';
@@ -29,12 +29,12 @@ export default function Home() {
                 {!darkMode ? <BsFillMoonStarsFill /> : <BsFillBrightnessHighFill className="text-gray-500" />}
                 {/* <BsFillMoonStarsFill /> */}
               </li>
-              <li><a className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md ml-8" href="">Resume</a></li>
+              <li><a className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md ml-8" href="https://resume.creddle.io/resume/9gy20sjmykz">Resume</a></li>
             </ul>
           </nav>
           <div className="text-center p-10 ">
             <h2 className="text-5xl py-2 text-teal-600 font-medium md:text-6xl">Mario D. Gutierrez</h2>
-            <h3 className="text-2xl py-2 md:text-3xl dark:text-gray-600">Full Stack Web Developer</h3>
+            <h3 className="text-2xl py-2 md:text-3xl dark:text-gray-600">Junior Full Stack Web Developer</h3>
             <p className="text-md py-5 leading-8 text-gray-800 dark:text-gray-400 md:text-xl max-w-xl mx-auto">
               Junior developer focused on problem solving and process optimization, looking to learn along exploring and innovating focused companies
             </p>
@@ -50,41 +50,47 @@ export default function Home() {
         </section>
         <section>
           <div>
-            <h3 className="text-3xl py-1 dark:text-gray-300">Services I offer</h3>
+            <h3 className="text-3xl py-1 dark:text-gray-300">My Story</h3>
             <p className="text-md py-2 leading-8 text-gray-80 dark:text-gray-400">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum eius ipsam exercitationem? Expedita animi sint molestiae repellendus ab placeat a molestias est doloremque esse qui, vitae veritatis quasi atque maxime! <span className="text-teal-500"> agencies</span> consulted for <span className="text-teal-500"> Lorem ipsum </span> dolor sit, amet consectetur adipisicing elit. Quasi modi placeat similique minima enim magni eligendi.
-            </p>
+              With an engineering background, life has taking me to the customer services and sales industry where I have thrived for many years, where I have learned how to efectively communicate with other and educating about new technologies like Solar Energy and automation but my real passion is creating and  building  stuff.</p>
             <p className="text-md py-2 leading-8 text-gray-80 dark:text-gray-400">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero placeat totam voluptate quaerat obcaecati corrupti minus velit sit similique, atque aliquid animi tempora. Quo nam aliquam iusto temporibus rem repellat!
+              I love programming, coding, finding solutions to puzzles and get that excitement when something works, when you have the answer and everything makes sense, when you unlock a new achievement and deliver the solution that everybody was waiting for, I love that and even more, for some reason that goes beyond my understanding, I love to explain what I did and help people understand the process.
             </p>
           </div>
           <div className="lg:flex gap-10">
             <div className="flex flex-col items-center text-center shadow-lg p-10 rounded-xl my-10">
               <Image alt="" src={design} width={100} height={100} />
-              <h3 className="text-lg font-medium pt-8 pb-2 dark:text-gray-300">Beautiful Designs</h3>
-              <p className="py-2 dark:text-gray-400">Creating Beautiful designs tailored to your needs</p>
-              <h4 className="py-4 text-teal-600">Design tools I use</h4>
-              <p className="text-gray-800 py-1 dark:text-gray-400">Photoshop</p>
-              <p className="text-gray-800 py-1 dark:text-gray-400">Figma</p>
-              <p className="text-gray-800 py-1 dark:text-gray-400">Illustrator</p>
+              <h3 className="text-lg font-medium pt-8 pb-2 dark:text-gray-300">Front End</h3>
+              <p className="py-2 dark:text-gray-400">Front End Libraries and frameworks</p>
+              <h4 className="py-4 text-teal-600">Some of them</h4>
+              <p className="text-gray-800 py-1 dark:text-gray-400">React</p>
+              <p className="text-gray-800 py-1 dark:text-gray-400">NodeJS</p>
+              <p className="text-gray-800 py-1 dark:text-gray-400">NextJS</p>
+              <p className="text-gray-800 py-1 dark:text-gray-400">TailwindCSS</p>
+              <p className="text-gray-800 py-1 dark:text-gray-400">and more...</p>
             </div>
             <div className="flex flex-col items-center text-center shadow-lg p-10 rounded-xl my-10">
               <Image alt="" src={code} width={100} height={100} />
-              <h3 className="text-lg font-medium pt-8 pb-2 dark:text-gray-300">Beautiful Designs</h3>
-              <p className="py-2 dark:text-gray-400">Creating Beautiful designs tailored to your needs</p>
-              <h4 className="py-4 text-teal-600">Design tools I use</h4>
-              <p className="text-gray-800 py-1 dark:text-gray-400">Photoshop</p>
-              <p className="text-gray-800 py-1 dark:text-gray-400">Figma</p>
-              <p className="text-gray-800 py-1 dark:text-gray-400">Illustrator</p>
+              <h3 className="text-lg font-medium pt-8 pb-2 dark:text-gray-300">Back End</h3>
+              <p className="py-2 dark:text-gray-400">Back End libraries and frameworks</p>
+              <h4 className="py-4 text-teal-600">Some of them</h4>
+              <p className="text-gray-800 py-1 dark:text-gray-400">Axios</p>
+              <p className="text-gray-800 py-1 dark:text-gray-400">Prisma</p>
+              <p className="text-gray-800 py-1 dark:text-gray-400">SQL</p>
+              <p className="text-gray-800 py-1 dark:text-gray-400">ExpressJS</p>
+              <p className="text-gray-800 py-1 dark:text-gray-400">and more...</p>
             </div>
             <div className="flex flex-col items-center text-center shadow-lg p-10 rounded-xl my-10">
               <Image alt="" src={consulting} width={100} height={100} />
-              <h3 className="text-lg font-medium pt-8 pb-2 dark:text-gray-300">Beautiful Designs</h3>
-              <p className="py-2 dark:text-gray-400">Creating Beautiful designs tailored to your needs</p>
-              <h4 className="py-4 text-teal-600">Design tools I use</h4>
-              <p className="text-gray-800 py-1 dark:text-gray-400">Photoshop</p>
-              <p className="text-gray-800 py-1 dark:text-gray-400">Figma</p>
-              <p className="text-gray-800 py-1 dark:text-gray-400">Illustrator</p>
+              <h3 className="text-lg font-medium pt-8 pb-2 dark:text-gray-300">Transferable Skills</h3>
+              <p className="py-2 dark:text-gray-400">Other very important skills that you might find usefull</p>
+              <h4 className="py-4 text-teal-600">Some of them</h4>
+              <p className="text-gray-800 py-1 dark:text-gray-400">Quick Learning</p>
+              <p className="text-gray-800 py-1 dark:text-gray-400">Highly Sociable</p>
+              <p className="text-gray-800 py-1 dark:text-gray-400">Puzzle Solving</p>
+
+              <p className="text-gray-800 py-1 dark:text-gray-400">Killer dad jokes</p>
+              <p className="text-gray-800 py-1 dark:text-gray-400">and more...</p>
             </div>
           </div>
         </section>
