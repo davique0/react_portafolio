@@ -98,10 +98,10 @@ export default function Home() {
           <div>
             <h3 className="text-3xl py-1 dark:text-gray-300">Portafolio</h3>
             <p className="text-md py-2 leading-8 text-gray-80 dark:text-gray-400">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum eius ipsam exercitationem? Expedita animi sint molestiae repellendus ab placeat a molestias est doloremque esse qui, vitae veritatis quasi atque maxime! <span className="text-teal-500"> agencies</span> consulted for <span className="text-teal-500"> Lorem ipsum </span> dolor sit, amet consectetur adipisicing elit. Quasi modi placeat similique minima enim magni eligendi.
+
             </p>
             <p className="text-md py-2 leading-8 text-gray-80 dark:text-gray-400">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero placeat totam voluptate quaerat obcaecati corrupti minus velit sit similique, atque aliquid animi tempora. Quo nam aliquam iusto temporibus rem repellat!
+              I started my journey as a developer with hands on deck, working on projects as I was learning, I believe it is the only way to learn, experimenting, making mistakes and finding the solutions, here are some of my most recent projects, feel free to click on them to check its code on GitHub.
             </p>
           </div>
           <div className="flex flex-col gap-10 py-10 lg:flex-row lg: flex-wrap">
