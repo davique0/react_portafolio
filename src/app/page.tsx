@@ -28,7 +28,7 @@ export default function Home() {
               <li className="cursor-pointer" onClick={() => setDarkMode(!darkMode)}>
                 {!darkMode ? <BsFillMoonStarsFill /> : <BsFillBrightnessHighFill className="text-gray-500" />}
               </li>
-              <li><a className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md ml-8" href="https://resume.creddle.io/resume/9gy20sjmykz">Resume</a></li>
+              <li><a target="_blank" className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md ml-8" href="https://resume.creddle.io/resume/9gy20sjmykz">Resume</a></li>
             </ul>
           </nav>
           <div className="text-center p-10 ">
