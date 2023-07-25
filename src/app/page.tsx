@@ -105,22 +105,39 @@ export default function Home() {
           </div>
           <div className="flex flex-col gap-10 py-10 lg:flex-row lg: flex-wrap">
             <div className="basis-1/3 flex-1">
-              <Image alt="Web1" src={web1} className="rounded-lg object-cover" layout="responsive" />
+              <a target="_blank" href="https://github.com/davique0/TripMate">
+                <Image alt="TripMate Index" src={web1} className="rounded-lg object-cover" layout="responsive" />
+              </a>
             </div>
             <div className="basis-1/3 flex-1">
-              <Image alt="Web2" src={web2} className="rounded-lg object-cover" layout="responsive" />
+              <a target="_blank" href="https://github.com/davique0/scheduler">
+
+                <Image alt="Scheduler" src={web2} className="rounded-lg object-cover" layout="responsive" />
+              </a>
             </div>
             <div className="basis-1/3 flex-1">
-              <Image alt="Web3" src={web3} className="rounded-lg object-cover" layout="responsive" />
+              <a target="_blank" href="https://github.com/davique0/dashboard/tree/main/react-admin">
+
+                <Image alt="Dashboard Index" src={web3} className="rounded-lg object-cover" layout="responsive" />
+              </a>
             </div>
             <div className="basis-1/3 flex-1">
-              <Image alt="Web4" src={web4} className="rounded-lg object-cover" layout="responsive" />
+              <a target="_blank" href="https://github.com/davique0/dashboard/tree/main/react-admin">
+
+                <Image alt="Dashboard Calendar" src={web4} className="rounded-lg object-cover" layout="responsive" />
+              </a>
             </div>
             <div className="basis-1/3 flex-1">
-              <Image alt="Web5" src={web5} className="rounded-lg object-cover" layout="responsive" />
+              <a target="_blank" href="https://github.com/davique0/CardHeros">
+
+                <Image alt="Card Heros Index" src={web5} className="rounded-lg object-cover" layout="responsive" />
+              </a>
             </div>
             <div className="basis-1/3 flex-1">
-              <Image alt="Web6" src={web6} className="rounded-lg object-cover" layout="responsive" />
+              <a target="_blank" href="https://github.com/davique0/CardHeros">
+
+                <Image alt="Card Heroes Card" src={web6} className="rounded-lg object-cover" layout="responsive" />
+              </a>
             </div>
           </div>
         </section>
