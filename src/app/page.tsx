@@ -1,7 +1,7 @@
 'use client'
 import Head from "next/head"
-// import { BsFillMoonStarsFill, BsFillBrightnessHighFill } from 'react-icons/bs'
-// import { AiFillTwitterCircle, AiFillLinkedin, AiFillGithub } from "react-icons/ai"
+import { BsFillMoonStarsFill, BsFillBrightnessHighFill } from 'react-icons/bs'
+import { AiFillTwitterCircle, AiFillLinkedin, AiFillGithub } from "react-icons/ai"
 import Image from "next/image"
 import { useState } from "react"
 import deved from '../../public/dev-mario.png'
@@ -25,7 +25,9 @@ export default function Home() {
           <nav className="py-10 mb-12 flex justify-between">
             <h1 className="text-xl font-burtons dark:text-gray-600"> Developed by Mario</h1>
             <ul className="flex items-center">
-
+              <li className="cursor-pointer" onClick={() => setDarkMode(!darkMode)}>
+                {!darkMode ? <BsFillMoonStarsFill /> : <BsFillBrightnessHighFill className="text-gray-500" />}
+              </li>
               <li><a className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md ml-8" href="https://resume.creddle.io/resume/9gy20sjmykz">Resume</a></li>
             </ul>
           </nav>
@@ -36,11 +38,11 @@ export default function Home() {
               Junior developer focused on problem solving and process optimization, looking to learn along exploring and innovating focused companies
             </p>
           </div>
-          {/* <div className="text-5xl flex justify-center gap-16 py-3 text-gray-600">
+          <div className="text-5xl flex justify-center gap-16 py-3 text-gray-600">
             <a href="https://github.com/davique0"><AiFillTwitterCircle /></a>
             <a href="https://www.linkedin.com/in/mario-d-gutierrez/"><AiFillLinkedin /></a>
             <a href="https://twitter.com/davique0"><AiFillGithub /></a>
-          </div> */}
+          </div>
           <div className="relative mx-auto bg-gradient-to-b from-teal-500 rounded-full w-80 h-80 mt-20 overflow-hidden md:h-96 md:w-96">
             <Image alt="Mario Pic Profile" src={deved} layout="fill" objectFit="cover" />
           </div>
