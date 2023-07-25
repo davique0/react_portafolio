@@ -57,7 +57,7 @@ export default function Home() {
               I love programming, coding, finding solutions to puzzles and get that excitement when something works, when you have the answer and everything makes sense, when you unlock a new achievement and deliver the solution that everybody was waiting for, I love that and even more, for some reason that goes beyond my understanding, I love to explain what I did and help people understand the process.
             </p>
           </div>
-          <div className="lg:flex gap-10">
+          <div className="lg:flex lg:justify-evenly gap-10">
             <div className="flex flex-col items-center text-center shadow-lg p-10 rounded-xl my-10">
               <Image alt="" src={design} width={100} height={100} />
               <h3 className="text-lg font-medium pt-8 pb-2 dark:text-gray-300">Front End</h3>
