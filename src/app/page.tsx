@@ -39,9 +39,9 @@ export default function Home() {
             </p>
           </div>
           <div className="text-5xl flex justify-center gap-16 py-3 text-gray-600">
-            <a href="https://github.com/davique0"><AiFillTwitterCircle /></a>
+            <a href="https://twitter.com/davique0"><AiFillTwitterCircle /></a>
             <a href="https://www.linkedin.com/in/mario-d-gutierrez/"><AiFillLinkedin /></a>
-            <a href="https://twitter.com/davique0"><AiFillGithub /></a>
+            <a href="https://github.com/davique0"><AiFillGithub /></a>
           </div>
           <div className="relative mx-auto bg-gradient-to-b from-teal-500 rounded-full w-80 h-80 mt-20 overflow-hidden md:h-96 md:w-96">
             <Image alt="Mario Pic Profile" src={deved} layout="fill" objectFit="cover" />
@@ -95,7 +95,7 @@ export default function Home() {
         </section>
         <section>
           <div>
-            <h3 className="text-3xl py-1 dark:text-gray-300">Portafolio</h3>
+            <h3 className="text-3xl py-1 dark:text-gray-300">Portfolio</h3>
             <p className="text-md py-2 leading-8 text-gray-80 dark:text-gray-400">
 
             </p>
