@@ -1,9 +1,12 @@
 'use client'
 import Head from "next/head"
+import { useState, useEffect } from "react"
+import 'flowbite'
+import { Carousel } from "flowbite-react";
+import { initFlowbite } from "flowbite"
 import { BsFillMoonStarsFill, BsFillBrightnessHighFill } from 'react-icons/bs'
 import { AiFillTwitterCircle, AiFillLinkedin, AiFillGithub } from "react-icons/ai"
 import Image from "next/image"
-import { useState } from "react"
 import deved from '../../public/dev-mario.png'
 import design from '../../public/design.png';
 import code from '../../public/code.png';
@@ -16,8 +19,13 @@ import web5 from '../../public/web5.png';
 import web6 from '../../public/web6.png';
 
 
+
+
 export default function Home() {
   const [darkMode, setDarkMode] = useState(false);
+  useEffect(() => {
+    initFlowbite();
+  }, [])
   return (
     <div className={darkMode ? "dark" : ""}>
       <main className="bg-white px-10 md:px-20 lg:px-40 duration-700 dark:bg-gray-900 dark:duration-700">
@@ -138,6 +146,39 @@ export default function Home() {
 
                 <Image alt="Card Heroes Card" src={web6} className="rounded-lg object-cover" layout="responsive" />
               </a>
+            </div>
+          </div>
+          <div className="h-[800px]">
+            Carousel
+            <div className="carousel w-full h-[500px]">
+              <div id="slide1" className="carousel-item relative w-full">
+                <Image alt="Web" src={web1} className="w-full" />
+                <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                  <a href="#slide4" className="btn btn-circle">❮</a>
+                  <a href="#slide2" className="btn btn-circle">❯</a>
+                </div>
+              </div>
+              <div id="slide2" className="carousel-item relative w-full">
+                <Image alt="Web" src={web2} className="w-full" />
+                <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                  <a href="#slide1" className="btn btn-circle">❮</a>
+                  <a href="#slide3" className="btn btn-circle">❯</a>
+                </div>
+              </div>
+              <div id="slide3" className="carousel-item relative w-full">
+                <Image alt="Web" src={web3} className="w-full" />
+                <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                  <a href="#slide2" className="btn btn-circle">❮</a>
+                  <a href="#slide4" className="btn btn-circle">❯</a>
+                </div>
+              </div>
+              <div id="slide4" className="carousel-item relative w-full">
+                <Image alt="Web" src={web4} className="w-full" />
+                <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                  <a href="#slide3" className="btn btn-circle">❮</a>
+                  <a href="#slide1" className="btn btn-circle">❯</a>
+                </div>
+              </div>
             </div>
           </div>
         </section>
