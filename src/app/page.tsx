@@ -100,7 +100,7 @@ export default function Home() {
           <div className="h-auto mx-auto flex justify-center items-center">
             <div className="carousel w-5/6 h-auto mx-auto my-10 py-5">
               {webData.map((web) => (
-                <div id={`slide${web.id}`} className="carousel-item relative w-full">
+                <div key={`slide${web.id}`} className="carousel-item relative w-full">
                   <div className="w-full text-center mt-[-10px] gap-1 absolute">
                     {web.url !== "" && (
 
