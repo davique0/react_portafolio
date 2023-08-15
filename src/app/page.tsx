@@ -1,7 +1,6 @@
 'use client'
-import { useState, useEffect } from "react"
+import { useState } from "react"
 import 'flowbite'
-import { initFlowbite } from "flowbite"
 import { BsFillMoonStarsFill, BsFillBrightnessHighFill } from 'react-icons/bs'
 import { AiFillTwitterCircle, AiFillLinkedin, AiFillGithub } from "react-icons/ai"
 import Image from "next/image"
