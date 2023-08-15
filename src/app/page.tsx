@@ -36,9 +36,45 @@ export default function Home() {
             <a target="_blank" href="https://www.linkedin.com/in/mario-d-gutierrez/"><AiFillLinkedin /></a>
             <a target="_blank" href="https://github.com/davique0"><AiFillGithub /></a>
           </div>
-          <div className="relative mx-auto bg-gradient-to-b from-teal-500 rounded-full w-80 h-80 mt-20 overflow-hidden md:h-96 md:w-96">
-            <Image alt="Mario Pic Profile" src={deved} layout="fill" objectFit="cover" />
+          <section>
+            <div>
+              <h3 className="text-3xl py-1 dark:text-gray-300">Portfolio</h3>
+              <p className="text-md py-2 leading-8 text-gray-80 dark:text-gray-400">
+
+              </p>
+              <p className="text-md py-2 leading-8 text-gray-80 dark:text-gray-400">
+                I started my journey as a developer with hands on deck, working on projects as I was learning, I believe it is the only way to learn, experimenting, making mistakes and finding the solutions, here are some of my most recent projects, feel free to click on them to check its code on GitHub.
+              </p>
+            </div>
+
+          </section>
+
+          {/* Carousel */}
+          <div className="h-auto mx-auto flex justify-center items-center">
+            <div className="carousel w-5/6 h-auto mx-auto my-10 py-5">
+              {webData.map((web) => (
+                <div key={web.id} id={`slide${web.id}`} className="carousel-item relative w-full">
+                  <div className="w-full text-center mt-[-10px] gap-1 absolute">
+                    {web.url !== "" && (
+
+                      <a target="_blank" className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md mx-auto hover:shadow-md hover:bg-gradient-to-r hover:from-teal-500 hover:to-cyan-500 hover:shadow-slate-500" href={`${web.url}`}>Live</a>
+                    )}
+
+                    <a target="_blank" className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md ml-8 hover:shadow-md hover:bg-gradient-to-r hover:from-teal-500 hover:to-cyan-500 hover:shadow-slate-500" href={`${web.gitHub}`}>GitHub</a>
+                  </div>
+                  <Image id={`${web.id}`} alt={`${web.title}`} src={web.photo} className="w-full rounded-xl" />
+                  <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                    <a href={`#slide${web.id - 1}`} className="btn btn-circle">❮</a>
+                    <a href={`#slide${web.id + 1}`} className="btn btn-circle">❯</a>
+                  </div>
+                </div>))}
+
+            </div>
           </div>
+          {/* Avatar */}
+          {/* <div className="relative mx-auto bg-gradient-to-b from-teal-500 rounded-full w-80 h-80 mt-20 overflow-hidden md:h-96 md:w-96">
+            <Image alt="Mario Pic Profile" src={deved} layout="fill" objectFit="cover" />
+          </div> */}
         </section>
         <section>
           <div>
@@ -83,39 +119,6 @@ export default function Home() {
 
               <p className="text-gray-800 py-1 dark:text-gray-400">Killer dad jokes</p>
               <p className="text-gray-800 py-1 dark:text-gray-400">and more...</p>
-            </div>
-          </div>
-        </section>
-        <section>
-          <div>
-            <h3 className="text-3xl py-1 dark:text-gray-300">Portfolio</h3>
-            <p className="text-md py-2 leading-8 text-gray-80 dark:text-gray-400">
-
-            </p>
-            <p className="text-md py-2 leading-8 text-gray-80 dark:text-gray-400">
-              I started my journey as a developer with hands on deck, working on projects as I was learning, I believe it is the only way to learn, experimenting, making mistakes and finding the solutions, here are some of my most recent projects, feel free to click on them to check its code on GitHub.
-            </p>
-          </div>
-          {/* Carousel */}
-          <div className="h-auto mx-auto flex justify-center items-center">
-            <div className="carousel w-5/6 h-auto mx-auto my-10 py-5">
-              {webData.map((web) => (
-                <div key={web.id} id={`slide${web.id}`} className="carousel-item relative w-full">
-                  <div className="w-full text-center mt-[-10px] gap-1 absolute">
-                    {web.url !== "" && (
-
-                      <a target="_blank" className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md mx-auto hover:shadow-md hover:bg-gradient-to-r hover:from-teal-500 hover:to-cyan-500 hover:shadow-slate-500" href={`${web.url}`}>Live</a>
-                    )}
-
-                    <a target="_blank" className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md ml-8 hover:shadow-md hover:bg-gradient-to-r hover:from-teal-500 hover:to-cyan-500 hover:shadow-slate-500" href={`${web.gitHub}`}>GitHub</a>
-                  </div>
-                  <Image id={`${web.id}`} alt={`${web.title}`} src={web.photo} className="w-full rounded-xl" />
-                  <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                    <a href={`#slide${web.id - 1}`} className="btn btn-circle">❮</a>
-                    <a href={`#slide${web.id + 1}`} className="btn btn-circle">❯</a>
-                  </div>
-                </div>))}
-
             </div>
           </div>
         </section>
