@@ -11,12 +11,13 @@ import deved from '../../public/dev-mario.png'
 import design from '../../public/design.png';
 import code from '../../public/code.png';
 import consulting from '../../public/consulting.png';
-import web1 from '../../public/web1.png';
-import web2 from '../../public/web2.png';
-import web3 from '../../public/web3.png';
-import web4 from '../../public/web4.png';
-import web5 from '../../public/web5.png';
-import web6 from '../../public/web6.png';
+import { webData } from '@/shared/Data'
+// import web1 from '../../public/web1.png';
+// import web2 from '../../public/web2.png';
+// import web3 from '../../public/web3.png';
+// import web4 from '../../public/web4.png';
+// import web5 from '../../public/web5.png';
+// import web6 from '../../public/web6.png';
 
 
 
@@ -111,7 +112,7 @@ export default function Home() {
               I started my journey as a developer with hands on deck, working on projects as I was learning, I believe it is the only way to learn, experimenting, making mistakes and finding the solutions, here are some of my most recent projects, feel free to click on them to check its code on GitHub.
             </p>
           </div>
-          <div className="flex flex-col gap-10 py-10 lg:flex-row lg: flex-wrap">
+          {/* <div className="flex flex-col gap-10 py-10 lg:flex-row lg: flex-wrap">
             <div className="basis-1/3 flex-1">
               <a target="_blank" href="https://github.com/davique0/TripMate">
                 <Image alt="TripMate Index" src={web1} className="rounded-lg object-cover" layout="responsive" />
@@ -147,33 +148,39 @@ export default function Home() {
                 <Image alt="Card Heroes Card" src={web6} className="rounded-lg object-cover" layout="responsive" />
               </a>
             </div>
-          </div>
-          <div className="h-[800px]">
-            Carousel
-            <div className="carousel w-full h-[500px]">
+          </div> */}
+          {/* Carousel */}
+          <div className="h-auto mx-auto flex justify-center items-center">
+            <div className="carousel w-5/6 h-auto mx-auto my-10 py-5">
               <div id="slide1" className="carousel-item relative w-full">
-                <Image alt="Web" src={web1} className="w-full" />
+
+                {webData.map((web) => (
+                  <Image id={`${web.id}`} alt={`${web.title}`} src={web.photo} className="w-full rounded-xl" width={'300'} height={'300'} />
+
+                ))}
+
+                {/* <Image alt="Web" src={web1} className="w-full rounded-xl" /> */}
                 <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
                   <a href="#slide4" className="btn btn-circle">❮</a>
                   <a href="#slide2" className="btn btn-circle">❯</a>
                 </div>
               </div>
               <div id="slide2" className="carousel-item relative w-full">
-                <Image alt="Web" src={web2} className="w-full" />
+                {/* <Image alt="Web" src={web2} className="w-full" /> */}
                 <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
                   <a href="#slide1" className="btn btn-circle">❮</a>
                   <a href="#slide3" className="btn btn-circle">❯</a>
                 </div>
               </div>
               <div id="slide3" className="carousel-item relative w-full">
-                <Image alt="Web" src={web3} className="w-full" />
+                {/* <Image alt="Web" src={web3} className="w-full" /> */}
                 <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
                   <a href="#slide2" className="btn btn-circle">❮</a>
                   <a href="#slide4" className="btn btn-circle">❯</a>
                 </div>
               </div>
               <div id="slide4" className="carousel-item relative w-full">
-                <Image alt="Web" src={web4} className="w-full" />
+                {/* <Image alt="Web" src={web4} className="w-full" /> */}
                 <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
                   <a href="#slide3" className="btn btn-circle">❮</a>
                   <a href="#slide1" className="btn btn-circle">❯</a>
