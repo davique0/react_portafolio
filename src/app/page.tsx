@@ -1,36 +1,18 @@
 'use client'
-import Head from "next/head"
 import { useState, useEffect } from "react"
 import 'flowbite'
-import { Carousel } from "flowbite-react";
 import { initFlowbite } from "flowbite"
 import { BsFillMoonStarsFill, BsFillBrightnessHighFill } from 'react-icons/bs'
-import { AiFillTwitterCircle, AiFillLinkedin, AiFillGithub, AiFillCaretLeft, AiFillCaretRight } from "react-icons/ai"
+import { AiFillTwitterCircle, AiFillLinkedin, AiFillGithub } from "react-icons/ai"
 import Image from "next/image"
 import deved from '../../public/dev-mario.png'
 import design from '../../public/design.png';
 import code from '../../public/code.png';
 import consulting from '../../public/consulting.png';
 import { webData } from '@/shared/Data'
-// import web1 from '../../public/web1.png';
-// import web2 from '../../public/web2.png';
-// import web3 from '../../public/web3.png';
-// import web4 from '../../public/web4.png';
-// import web5 from '../../public/web5.png';
-// import web6 from '../../public/web6.png';
-
-
-
 
 export default function Home() {
   const [darkMode, setDarkMode] = useState(false);
-  const [slide, setSlide] = useState(1)
-  useEffect(() => {
-    initFlowbite();
-  }, [])
-  const handleLeftClick = () => {
-    slide <= 1 ? setSlide(webData.length) : setSlide(slide - 1);
-  }
   return (
     <div className={darkMode ? "dark" : ""}>
       <main className="bg-white px-10 md:px-20 lg:px-40 duration-700 dark:bg-gray-900 dark:duration-700">
@@ -116,43 +98,6 @@ export default function Home() {
               I started my journey as a developer with hands on deck, working on projects as I was learning, I believe it is the only way to learn, experimenting, making mistakes and finding the solutions, here are some of my most recent projects, feel free to click on them to check its code on GitHub.
             </p>
           </div>
-          {/* <div className="flex flex-col gap-10 py-10 lg:flex-row lg: flex-wrap">
-            <div className="basis-1/3 flex-1">
-              <a target="_blank" href="https://github.com/davique0/TripMate">
-                <Image alt="TripMate Index" src={web1} className="rounded-lg object-cover" layout="responsive" />
-              </a>
-            </div>
-            <div className="basis-1/3 flex-1">
-              <a target="_blank" href="https://github.com/davique0/scheduler">
-
-                <Image alt="Scheduler" src={web2} className="rounded-lg object-cover" layout="responsive" />
-              </a>
-            </div>
-            <div className="basis-1/3 flex-1">
-              <a target="_blank" href="https://github.com/davique0/dashboard/tree/main/react-admin">
-
-                <Image alt="Dashboard Index" src={web3} className="rounded-lg object-cover" layout="responsive" />
-              </a>
-            </div>
-            <div className="basis-1/3 flex-1">
-              <a target="_blank" href="https://github.com/davique0/dashboard/tree/main/react-admin">
-
-                <Image alt="Dashboard Calendar" src={web4} className="rounded-lg object-cover" layout="responsive" />
-              </a>
-            </div>
-            <div className="basis-1/3 flex-1">
-              <a target="_blank" href="https://github.com/davique0/CardHeros">
-
-                <Image alt="Card Heros Index" src={web5} className="rounded-lg object-cover" layout="responsive" />
-              </a>
-            </div>
-            <div className="basis-1/3 flex-1">
-              <a target="_blank" href="https://github.com/davique0/CardHeros">
-
-                <Image alt="Card Heroes Card" src={web6} className="rounded-lg object-cover" layout="responsive" />
-              </a>
-            </div>
-          </div> */}
           {/* Carousel */}
           <div className="h-auto mx-auto flex justify-center items-center">
             <div className="carousel w-5/6 h-auto mx-auto my-10 py-5">
@@ -173,29 +118,6 @@ export default function Home() {
                   </div>
                 </div>))}
 
-              {/* <Image alt="Web" src={web1} className="w-full rounded-xl" /> */}
-
-              {/* <div id="slide2" className="carousel-item relative w-full">
-                <Image alt="Web" src={web2} className="w-full" />
-                <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                  <a href="#slide1" className="btn btn-circle">❮</a>
-                  <a href="#slide3" className="btn btn-circle">❯</a>
-                </div>
-              </div>
-              <div id="slide3" className="carousel-item relative w-full">
-                <Image alt="Web" src={web3} className="w-full" />
-                <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                  <a href="#slide2" className="btn btn-circle">❮</a>
-                  <a href="#slide4" className="btn btn-circle">❯</a>
-                </div>
-              </div>
-              <div id="slide4" className="carousel-item relative w-full">
-                <Image alt="Web" src={web4} className="w-full" />
-                <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                  <a href="#slide3" className="btn btn-circle">❮</a>
-                  <a href="#slide1" className="btn btn-circle">❯</a>
-                </div>
-              </div> */}
             </div>
           </div>
         </section>
