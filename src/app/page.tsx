@@ -5,7 +5,7 @@ import 'flowbite'
 import { Carousel } from "flowbite-react";
 import { initFlowbite } from "flowbite"
 import { BsFillMoonStarsFill, BsFillBrightnessHighFill } from 'react-icons/bs'
-import { AiFillTwitterCircle, AiFillLinkedin, AiFillGithub } from "react-icons/ai"
+import { AiFillTwitterCircle, AiFillLinkedin, AiFillGithub, AiFillCaretLeft, AiFillCaretRight } from "react-icons/ai"
 import Image from "next/image"
 import deved from '../../public/dev-mario.png'
 import design from '../../public/design.png';
@@ -24,9 +24,13 @@ import { webData } from '@/shared/Data'
 
 export default function Home() {
   const [darkMode, setDarkMode] = useState(false);
+  const [slide, setSlide] = useState(1)
   useEffect(() => {
     initFlowbite();
   }, [])
+  const handleLeftClick = () => {
+    slide <= 1 ? setSlide(webData.length) : setSlide(slide - 1);
+  }
   return (
     <div className={darkMode ? "dark" : ""}>
       <main className="bg-white px-10 md:px-20 lg:px-40 duration-700 dark:bg-gray-900 dark:duration-700">
@@ -152,40 +156,46 @@ export default function Home() {
           {/* Carousel */}
           <div className="h-auto mx-auto flex justify-center items-center">
             <div className="carousel w-5/6 h-auto mx-auto my-10 py-5">
-              <div id="slide1" className="carousel-item relative w-full">
+              {webData.map((web) => (
+                <div id={`slide${web.id}`} className="carousel-item relative w-full">
+                  <div className="w-full text-center mt-[-10px] gap-1 absolute">
+                    {web.url !== "" && (
 
-                {webData.map((web) => (
-                  <Image id={`${web.id}`} alt={`${web.title}`} src={web.photo} className="w-full rounded-xl" width={'300'} height={'300'} />
+                      <a target="_blank" className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md mx-auto hover:shadow-md hover:bg-gradient-to-r hover:from-teal-500 hover:to-cyan-500 hover:shadow-slate-500" href={`${web.url}`}>Live</a>
+                    )}
 
-                ))}
+                    <a target="_blank" className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md ml-8 hover:shadow-md hover:bg-gradient-to-r hover:from-teal-500 hover:to-cyan-500 hover:shadow-slate-500" href={`${web.gitHub}`}>GitHub</a>
+                  </div>
+                  <Image id={`${web.id}`} alt={`${web.title}`} src={web.photo} className="w-full rounded-xl" />
+                  <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                    <a href={`#slide${web.id - 1}`} className="btn btn-circle">❮</a>
+                    <a href={`#slide${web.id + 1}`} className="btn btn-circle">❯</a>
+                  </div>
+                </div>))}
 
-                {/* <Image alt="Web" src={web1} className="w-full rounded-xl" /> */}
-                <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                  <a href="#slide4" className="btn btn-circle">❮</a>
-                  <a href="#slide2" className="btn btn-circle">❯</a>
-                </div>
-              </div>
-              <div id="slide2" className="carousel-item relative w-full">
-                {/* <Image alt="Web" src={web2} className="w-full" /> */}
+              {/* <Image alt="Web" src={web1} className="w-full rounded-xl" /> */}
+
+              {/* <div id="slide2" className="carousel-item relative w-full">
+                <Image alt="Web" src={web2} className="w-full" />
                 <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
                   <a href="#slide1" className="btn btn-circle">❮</a>
                   <a href="#slide3" className="btn btn-circle">❯</a>
                 </div>
               </div>
               <div id="slide3" className="carousel-item relative w-full">
-                {/* <Image alt="Web" src={web3} className="w-full" /> */}
+                <Image alt="Web" src={web3} className="w-full" />
                 <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
                   <a href="#slide2" className="btn btn-circle">❮</a>
                   <a href="#slide4" className="btn btn-circle">❯</a>
                 </div>
               </div>
               <div id="slide4" className="carousel-item relative w-full">
-                {/* <Image alt="Web" src={web4} className="w-full" /> */}
+                <Image alt="Web" src={web4} className="w-full" />
                 <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
                   <a href="#slide3" className="btn btn-circle">❮</a>
                   <a href="#slide1" className="btn btn-circle">❯</a>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </section>
