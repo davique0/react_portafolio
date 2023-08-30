@@ -3,6 +3,7 @@ import Gym from "../../public/gym.png";
 import TripMate from "../../public/tripMate.png";
 import Scheduler from "../../public/scheduler.png";
 import CardHeroes from "../../public/cardHeroes.png";
+import BlogAi from "../../public/blogAi.png";
 
 export const webData = [
   {
@@ -19,26 +20,32 @@ export const webData = [
     url: "https://gym-typescript-f3q.pages.dev/",
     gitHub: "https://github.com/davique0/gym-typescript",
   },
-
   {
     id: 3,
-    title: "TripMate",
-    photo: TripMate,
-    url: "",
-    gitHub: "https://www.github.com",
+    title: "Blog AI",
+    photo: BlogAi,
+    url: "https://blog-ai-rem6v9l0l-davique0.vercel.app/post/clllg1dmn0000yjmyd5kfu9dp",
+    gitHub: "https://github.com/davique0/blog-ai-app",
   },
   {
     id: 4,
+    title: "TripMate",
+    photo: TripMate,
+    url: "",
+    gitHub: "https://github.com/davique0/TripMate",
+  },
+  {
+    id: 5,
     title: "Scheduler",
     photo: Scheduler,
     url: "",
-    gitHub: "https://www.github.com",
+    gitHub: "https://github.com/davique0/scheduler",
   },
   {
     id: 5,
     title: "CardHeroes",
     photo: CardHeroes,
     url: "",
-    gitHub: "https://www.github.com",
+    gitHub: "https://github.com/davique0/CardHeros",
   },
 ];
