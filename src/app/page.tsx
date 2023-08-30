@@ -91,6 +91,7 @@ export default function Home() {
               <h3 className="text-lg font-medium pt-8 pb-2 dark:text-gray-300">Front End</h3>
               <p className="py-2 dark:text-gray-400">Front End Libraries and frameworks</p>
               <h4 className="py-4 text-teal-600">Some of them</h4>
+              <p className="text-gray-800 py-1 dark:text-gray-400">Axios</p>
               <p className="text-gray-800 py-1 dark:text-gray-400">React</p>
               <p className="text-gray-800 py-1 dark:text-gray-400">NodeJS</p>
               <p className="text-gray-800 py-1 dark:text-gray-400">NextJS</p>
@@ -102,7 +103,6 @@ export default function Home() {
               <h3 className="text-lg font-medium pt-8 pb-2 dark:text-gray-300">Back End</h3>
               <p className="py-2 dark:text-gray-400">Back End libraries and frameworks</p>
               <h4 className="py-4 text-teal-600">Some of them</h4>
-              <p className="text-gray-800 py-1 dark:text-gray-400">Axios</p>
               <p className="text-gray-800 py-1 dark:text-gray-400">Prisma</p>
               <p className="text-gray-800 py-1 dark:text-gray-400">SQL</p>
               <p className="text-gray-800 py-1 dark:text-gray-400">ExpressJS</p>
