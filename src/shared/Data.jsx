@@ -3,7 +3,7 @@ import Gym from "../../public/gym.png";
 import TripMate from "../../public/tripMate.png";
 import Scheduler from "../../public/scheduler.png";
 import CardHeroes from "../../public/cardHeroes.png";
-import BlogAi from "../../public/blogAi.png";
+import BlogAi from "../../public/blog-ai.png";
 
 export const webData = [
   {
